@@ -1,0 +1,15 @@
+﻿<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs" xmlns:bal="http://wixtoolset.org/schemas/v4/wxs/bal">
+  <Bundle Name="OptionsPageFocusBug" Manufacturer="TODO Manufacturer" Version="1.0.0.0" UpgradeCode="c2e623cb-dc17-4d42-80a4-ba7986d9ae41">
+    <BootstrapperApplication>
+      <bal:WixStandardBootstrapperApplication LicenseUrl="https://www.example.com/license" Theme="hyperlinkLicense" ThemeFile="Theme.xml"/>
+    </BootstrapperApplication>
+
+    <Variable Name="InstallFolder" Type="formatted" bal:Overridable="yes" Value="[ProgramFiles6432Folder]Foo\Bar" />
+
+    <Chain>
+      <!-- Dummy to avoid compile errors -->
+      <ExePackage Name="Calculator" SourceFile="C:\Windows\system32\calc.exe" DetectCondition="1" Permanent="true" />
+    </Chain>
+
+  </Bundle>
+</Wix>
